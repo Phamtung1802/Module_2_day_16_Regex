@@ -1,3 +1,6 @@
+import java.io.DataInputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -10,7 +13,6 @@ public class TenLopHoc {
         public TenLopHoc() {
             pattern = Pattern.compile(EMAIL_REGEX);
         }
-
         public boolean validate(String regex) {
             return pattern.matcher(regex).matches();
         }
@@ -29,7 +31,6 @@ public class TenLopHoc {
             boolean isvalid = tenLopHoc.validate(email);
             System.out.println("Email is " + email +" is valid: "+ isvalid);
         }
-
     }
 }
 
